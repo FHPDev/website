@@ -1,0 +1,16 @@
+{
+  "name": "finding-hair-peace",
+  "version": "0.0.1",
+  "description": "monorepo for findining hair peace website.",
+  "main": "index.js",
+  "repository": "https://github.com/FHPDev/website",
+  "author": "Brian Clovis",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "concurrently": "^6.2.0"
+  },
+  "resolutions": {
+    "graphql": "15.5.1"
+  }
+}
