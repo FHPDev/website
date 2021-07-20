@@ -10,14 +10,18 @@
   "dependencies": {
     "concurrently": "^6.2.0"
   },
-  "workspaces": ["packages/*"],
+  "workspaces": [
+    "packages/*"
+  ],
   "resolutions": {
     "graphql": "15.5.1"
   },
   "scripts": {
+    "cms:dev": "yarn workspace cms dev",
+    "cms:build": "yarn workspace cms build",
     "clinet:dev": "yarn workspace client dev",
     "client:build": "yarn workspace client dev",
-    "dev": "yarn client:dev",
+    "dev": "concurrently - kill-others \"yarn cms:dev\" \"yarn clinet:dev\"",
     "build": "yarn client:build"
   }
 }
