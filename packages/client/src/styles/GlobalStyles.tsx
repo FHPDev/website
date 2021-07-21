@@ -2,14 +2,14 @@ import { createGlobalStyle } from 'styled-components'
 
 const GlobalStyles = createGlobalStyle`
   :root {
-    --red: #DC490B;
-    --black: #21323B;
-    --purple: #A665AD;
-    --green: #416125;
-    --violet: #5C2F61;
+    --cfBlue: #5680E9;
+    --seagull: #84CEEB;
+    --pictonBlue: #5AB9EA;
+    --pGray: #C1C8E4;
+    --amethyst: #8860D0;
     --ltblue: #F7DCFA;
     --white: #C3FAEC;
-    --grey: #B9A5BB;
+    --black: #222;
     --radius: .3rem;
   }
   *, *:before, *:after {
@@ -50,17 +50,17 @@ const GlobalStyles = createGlobalStyle`
   }
   html {
     scrollbar-width: thin;
-    scrollbar-color: var(--purple) var(--white);
+    scrollbar-color: var(--amethyst) var(--seagull);
   }
 
   body::-webkit-scrollbar-track {
-    background: var(--white);
+    background: var(--seagull);
   }
 
   body::-webkit-scrollbar-thumb {
-    background-color: var(--purple) ;
+    background-color: var(--amethyst) ;
     border-radius: 6px;
-    border: 3px solid var(--white);
+    border: 3px solid var(--seagull);
   }
 
   hr {
@@ -78,17 +78,6 @@ const GlobalStyles = createGlobalStyle`
       margin: 0 auto;
       padding: 0 clamp(2rem, 1vw, 4rem);
       width: 100%;
-  }
-
-  .banner-left {
-    display: flex;
-    color: white;
-    text-align: left;
-    align-items: center;
-
-    .container {
-      margin-top: -10vh; /*clamp this */
-    }
   }
 
   .content-container {
