@@ -10,6 +10,7 @@
   "dependencies": {
     "concurrently": "^6.2.0"
   },
+  "homepage": "http://FHPDev.github.io/website",
   "workspaces": [
     "packages/*"
   ],
@@ -22,6 +23,9 @@
     "clinet:dev": "yarn workspace client dev",
     "client:build": "yarn workspace client dev",
     "dev": "concurrently - kill-others \"yarn cms:dev\" \"yarn clinet:dev\"",
-    "build": "yarn client:build"
+    "build": "yarn client:build",
+    "storybook": "yarn workspace client storybook",
+    "storybook:build": "yarn workspace client build-storybook",
+    "storybook:deploy": "yarn workspace client deploy-storybook"
   }
 }
