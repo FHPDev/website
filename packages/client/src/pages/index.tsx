@@ -1,8 +1,8 @@
-import { useEffect } from "react"
+import { useEffect } from 'react';
 import { Link, navigate } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 
-import Seo from "../components/seo"
+import Seo from '../components/seo'
 
 const IndexPage = () => {
   useEffect(() => {
