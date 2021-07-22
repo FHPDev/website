@@ -8,16 +8,10 @@ const DivStyles = styled.div`
     align-items: center;
     justify-content: center;
     text-align: center;
-    font-family: sans-serif;
     color: var(--black);
 
     h1 {
-        font-size: clamp(2.8rem, 3vw, 6.8rem);
-        letter-spacing: .2rem;
-    }
-
-    p {
-        font-size: clamp(1.8rem, 3vw, 2.8rem);
+        font-weight: 700;
     }
 `
 const comingSoon = () => {

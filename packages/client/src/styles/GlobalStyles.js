@@ -18,30 +18,11 @@ const GlobalStyles = createGlobalStyle`
 
   html {
     box-sizing: border-box;
-    font-size: 62.5%;
-    line-height: 1.5;
-    background-color: var(--white);
   }
 
   fieldset {
     border-color: rgba(0,0,0,0.1);
     border-width: 1px;
-  }
-
-  button {
-    background: var(--red);
-    color: white;
-    border: 0;
-    padding: 0.6rem 1rem;
-    border-radius: 2px;
-    cursor: pointer;
-    --cast: 2px;
-    box-shadow: var(--cast) var(--cast) 0 var(--grey);
-    text-shadow: 0.5px 0.5px 0 rgba(0,0,0,0.2);
-    transition: all 0.2s;
-    &:hover {
-      --cast: 4px;
-    }
   }
 
   /* Scrollbar Styles */
@@ -71,6 +52,31 @@ const GlobalStyles = createGlobalStyle`
 
   img {
     max-width: 100%;
+  }
+
+  figure {
+    margin: 0;
+  }
+
+  input::-moz-focus-inner {
+    border:0; 
+    padding:0; 
+    margin:0;
+  }
+
+  ul, ol, dd {
+    margin:0; 
+    padding:0; 
+    list-style:none;
+  }
+
+  cite {
+    font-style:normal;
+  }
+
+  fieldset {
+    border-width:0; 
+    padding:0; margin:0;
   }
 
   .container {
