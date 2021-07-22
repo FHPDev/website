@@ -3,6 +3,7 @@ import { Link, navigate } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 
 import Seo from '../components/seo'
+import Button from '../components/Button/Button';
 
 const IndexPage = () => {
   useEffect(() => {
@@ -26,6 +27,7 @@ const IndexPage = () => {
         alt="A Gatsby astronaut"
         style={{ marginBottom: `1.45rem` }}
       />
+      <Button config='primary'>OH HAI</Button>
       <p>
         <Link to="/page-2/">Go to page 2</Link> <br />
         <Link to="/using-typescript/">Go to "Using TypeScript"</Link>
