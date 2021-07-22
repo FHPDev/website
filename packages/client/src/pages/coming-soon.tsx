@@ -1,4 +1,5 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
+import Seo from '../components/seo';
 
 const DivStyles = styled.div`
   height: 100vh;
@@ -15,12 +16,13 @@ const DivStyles = styled.div`
   }
 `;
 const comingSoon = () => (
-    <DivStyles>
-        <div>
-            <h1>Finding Hair Peace</h1>
-            <p>coming soon</p>
-        </div>
-    </DivStyles>
+  <DivStyles>
+    <Seo title="Coming soon" />
+    <div>
+      <h1>Finding Hair Peace</h1>
+      <p>coming soon</p>
+    </div>
+  </DivStyles>
 );
 
 export default comingSoon;
