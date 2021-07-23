@@ -15,7 +15,7 @@ const BannerImage = ({ image, children, className }) => {
                 backgroundSize: 'cover',
                 backgroundPosition: 'center bottom',
                 backgroundRepeat: 'no-repeat',
-                minHeight: 'clamp(34vh, 60vw, 75vh)',
+                minHeight: 'clamp(34vh, 60vw, 78vh)',
                 backgroundAttachment: 'fixed',
                 display: 'flex',
                 alignItems: 'center',

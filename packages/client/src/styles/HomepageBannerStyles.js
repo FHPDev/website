@@ -7,6 +7,7 @@ const HomepageBannerStyles = styled.div`
     }
     background-color: rgba(136, 96, 208, 0.7);
     padding: clamp(1rem, 3vw, 6rem);
+    margin-top: 7.7rem;
 
     @media (max-width: 768px) {
         margin: 0 auto;
