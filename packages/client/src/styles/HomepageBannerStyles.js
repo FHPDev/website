@@ -1,11 +1,12 @@
 import styled from 'styled-components'
 
 const HomepageBannerStyles = styled.div`
-    background-color: rgba(0, 0, 0, 0.4);
-    color: var(--black);
-    padding: clamp(2rem, 3vw, 6rem) clamp(2rem, 3vw, 6rem);
-    backdrop-filter: blur(20px);
-    color: var(--seagull);
+    @supports (backdrop-filter: blur(20px)) {
+      background-color: rgba(136, 96, 208, 0.4);
+      backdrop-filter: blur(20px);
+    }
+    background-color: rgba(136, 96, 208, 0.7);
+    padding: clamp(1rem, 3vw, 6rem);
 
     @media (max-width: 768px) {
         margin: 0 auto;

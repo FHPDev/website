@@ -44,6 +44,12 @@ const Typography = createGlobalStyle`
         text-transform: capitalize;
     }
 
+    .quote-display {
+        font-size: clamp(1.8rem, 3vw, 2.4rem);
+        text-align: center;
+        font-style: italic;
+    }
+
     a {
         text-decoration: none; 
         color: inherit; 

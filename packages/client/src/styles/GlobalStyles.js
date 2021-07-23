@@ -80,13 +80,8 @@ const GlobalStyles = createGlobalStyle`
   .container {
       max-width: 1400px;
       margin: 0 auto;
-      padding: 0 clamp(2rem, 1vw, 4rem);
+      padding: clamp(3rem, 3vw, 6rem);
       width: 100%;
-  }
-
-  .content-container {
-    padding: clamp(2rem, 3vw, 6rem);
-    color: var(--black);
   }
 
   .modal-overlay {
@@ -97,6 +92,7 @@ const GlobalStyles = createGlobalStyle`
     background-color: rgba(0,0,0, 0.9);
     z-index: 6;
   }
+
   .sr-only {
       position: absolute;
       width: 1px;
