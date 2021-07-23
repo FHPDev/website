@@ -33,11 +33,12 @@ const Typography = createGlobalStyle`
 
     h1, h2, h3, h4, h5, h6{
         font-weight: inherit;
+        margin: 0;
     }
 
     h1, .h1 {
         font-family: SansitaSwashed;
-        font-size: clamp(4.6rem, 4vw, 8.4rem);
+        font-size: clamp(4.6rem, 6vw, 8.4rem);
         letter-spacing: 0.2rem;
         line-height: 1.2;
         text-transform: capitalize;

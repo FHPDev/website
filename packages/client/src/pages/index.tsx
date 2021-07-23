@@ -1,14 +1,31 @@
 import { useEffect } from 'react';
-import { Link, navigate } from "gatsby"
+import { graphql, Link, navigate, useStaticQuery } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 import UseModal from '../library/UseModal';
 
 import Seo from '../components/seo'
 import Button from '../components/Button/Button';
 import Modal from '../components/Modal/Modal';
+import BannerImage from '../components/Hero/Hero';
+
+import HomepageBannerStyles from '../styles/HomepageBannerStyles';
 
 const IndexPage = () => {
   const [modalOpen, toggler] = UseModal("test");
+  const data = useStaticQuery(
+    graphql`
+    query  {
+      file(relativePath: {eq: "fhpPlaceholder.jpg"}) {
+        childImageSharp {
+          fluid(quality:90, maxWidth: 1920) {
+                ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      }
+    }
+    `
+  )
+
 
   useEffect(() => {
     console.log(process.env.DEV_ENV)
@@ -25,9 +42,12 @@ const IndexPage = () => {
   return (
     <>
       <Seo title="Home" />
-      <h1>Hi people</h1>
-      <p>Welcome to your new Gatsby site. TEST DEPLOY</p>
-      <p>Now go build something great.</p>
+      <BannerImage image={data.file.childImageSharp.fluid} >
+        <HomepageBannerStyles>
+          <h1>Finding Hair Peace</h1>
+          <p>A sort of sub heading</p>
+        </HomepageBannerStyles>
+      </BannerImage>
       {
         modalOpen && (
           <Modal click={toggler}>
