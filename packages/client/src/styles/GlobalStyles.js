@@ -18,20 +18,17 @@ const GlobalStyles = createGlobalStyle`
 
   html {
     box-sizing: border-box;
-  }
+    scrollbar-width: thin;
+    scrollbar-color: var(--amethyst) var(--seagull);
 
-  fieldset {
-    border-color: rgba(0,0,0,0.1);
-    border-width: 1px;
+    &.open {
+      overflow: hidden;
+    }
   }
 
   /* Scrollbar Styles */
   body::-webkit-scrollbar {
     width: 12px;
-  }
-  html {
-    scrollbar-width: thin;
-    scrollbar-color: var(--amethyst) var(--seagull);
   }
 
   body::-webkit-scrollbar-track {
@@ -76,7 +73,8 @@ const GlobalStyles = createGlobalStyle`
 
   fieldset {
     border-width:0; 
-    padding:0; margin:0;
+    padding:0; 
+    margin:0;
   }
 
   .container {
@@ -90,6 +88,26 @@ const GlobalStyles = createGlobalStyle`
     padding: clamp(2rem, 3vw, 6rem);
     color: var(--black);
   }
+
+  .modal-overlay {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0, 0.9);
+    z-index: 6;
+  }
+  .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap; /* added line */
+      border: 0;
+}
 `
 
 export default GlobalStyles
