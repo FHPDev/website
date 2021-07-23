@@ -3,4 +3,3 @@
 
 yarn storybook:build
 yarn storybook:deploy
-yarn storybook:deploy
