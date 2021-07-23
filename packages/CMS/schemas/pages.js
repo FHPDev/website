@@ -1,7 +1,10 @@
+import {RiPagesFill} from 'react-icons/ri'
+
 export default {
     name: 'pages',
     title: 'Pages',
     type: 'document',
+    icon: RiPagesFill,
     fields: [
         {
             name: 'pageName',
@@ -9,22 +12,15 @@ export default {
             type: 'string',
         },
         {
-            name: 'heroTitle',
-            title: 'Hero Title',
-            type: 'string',
-        },
-        {
-            name: 'heroSubtitle',
-            title: 'Hero Subtitle',
-            type: 'string',
-        },
-        {
-            name: 'image',
-            title: 'Hero Image',
-            type: 'image',
-            options: {
-            hotspot: true,
-            },
-        },
+            title: 'Hero for page',
+            name: 'hero',
+            type: 'hero'
+        }
     ],
+    preview: {
+        select: {
+            title: 'pageName',
+            media: 'hero.image'
+        }
+    }
   }

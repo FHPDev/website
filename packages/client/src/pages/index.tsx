@@ -17,11 +17,13 @@ const IndexPage = () => {
     query MyQuery {
       page: sanityPages(pageName: {eq: "Home"}) {
         pageName
-        heroTitle
-        heroSubtitle
-        image {
-          asset {
-            gatsbyImageData
+        hero {
+          heroTitle
+          heroSubtitle
+          image {
+            asset {
+              gatsbyImageData
+            }
           }
         }
       }
@@ -38,7 +40,7 @@ const IndexPage = () => {
 
   }, [])
 
-  const { page: { pageName, heroTitle, heroSubtitle, image } } = data
+  const { page: { pageName, hero: { heroTitle, heroSubtitle, image } } } = data
 
   return (
     <>
