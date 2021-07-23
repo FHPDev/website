@@ -27,6 +27,10 @@
     "storybook": "yarn workspace client storybook",
     "storybook:build": "yarn workspace client build-storybook",
     "storybook:deploy": "yarn workspace client deploy-storybook",
-    "cms:deploy": "yarn workspace findinghairpeace deploy"
+    "cms:deploy": "yarn workspace findinghairpeace deploy",
+    "postinstall": "husky install"
+  },
+  "devDependencies": {
+    "husky": "^7.0.1"
   }
 }
