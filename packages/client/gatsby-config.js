@@ -16,6 +16,13 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
+    {
+      resolve: `gatsby-plugin-portal`,
+      options: {
+        key: 'modal-portal',
+        id: 'modal-portal'
+      }
+    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
