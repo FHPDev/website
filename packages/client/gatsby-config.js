@@ -1,3 +1,7 @@
+require('dotenv').config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
+
 module.exports = {
   siteMetadata: {
     title: `Finding Hair Peace`,
@@ -9,6 +13,15 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     'gatsby-plugin-styled-components',
     `gatsby-plugin-image`,
+    {
+      resolve: `gatsby-source-sanity`,
+      options: {
+        projectId: '1fg8plz5',
+        dataset: 'production',
+        watchMode: true,
+        token: process.env.SANITY_TOKEN,
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
