@@ -14,11 +14,14 @@ const IndexPage = () => {
   const [modalOpen, toggler] = UseModal("test");
   const data = useStaticQuery(
     graphql`
-    query  {
-      file(relativePath: {eq: "fhpPlaceholder.jpg"}) {
-        childImageSharp {
-          fluid(quality:90, maxWidth: 1920) {
-                ...GatsbyImageSharpFluid_withWebp
+    query MyQuery {
+      page: sanityPages(pageName: {eq: "Home"}) {
+        pageName
+        heroTitle
+        heroSubtitle
+        image {
+          asset {
+            gatsbyImageData
           }
         }
       }
@@ -35,17 +38,15 @@ const IndexPage = () => {
 
   }, [])
 
-  const handleClick = () => {
-    toggler();
-  }
+  const { page: { pageName, heroTitle, heroSubtitle, image } } = data
 
   return (
     <>
-      <Seo title="Home" />
-      <BannerImage image={data.file.childImageSharp.fluid} >
+      <Seo title={pageName} />
+      <BannerImage image={image.asset.gatsbyImageData.images.fallback} >
         <HomepageBannerStyles>
-          <h1>Finding Hair Peace</h1>
-          <p>A sort of sub heading</p>
+          <h1>{heroTitle}</h1>
+          <p>{heroSubtitle}</p>
         </HomepageBannerStyles>
       </BannerImage>
       <section className="container">
@@ -53,26 +54,6 @@ const IndexPage = () => {
           Prow scuttle parrel provost Sail ho shrouds spirits boom mizzenmast yardarm. Pinnace holystone mizzenmast quarter crow's nest nipperkin grog yardarm hempen halter furl. Swab barque interloper chantey doubloon starboard grog black jack gangway rutters.
         </p>
       </section>
-      {/* {
-        modalOpen && (
-          <Modal click={toggler}>
-            <h1>Oh hai</h1>
-          </Modal>
-        )
-      }
-      <StaticImage
-        src="../images/gatsby-astronaut.png"
-        width={300}
-        quality={95}
-        formats={["AUTO", "WEBP", "AVIF"]}
-        alt="A Gatsby astronaut"
-        style={{ marginBottom: `1.45rem` }}
-      />
-      <Button config='primary' onClick={handleClick}>OH HAI</Button>
-      <p>
-        <Link to="/page-2/">Go to page 2</Link> <br />
-        <Link to="/using-typescript/">Go to "Using TypeScript"</Link>
-      </p> */}
     </>
   )
 }

@@ -26,6 +26,7 @@
     "build": "yarn client:build",
     "storybook": "yarn workspace client storybook",
     "storybook:build": "yarn workspace client build-storybook",
-    "storybook:deploy": "yarn workspace client deploy-storybook"
+    "storybook:deploy": "yarn workspace client deploy-storybook",
+    "cms:deploy": "yarn workspace findinghairpeace deploy"
   }
 }
