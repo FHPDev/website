@@ -42,6 +42,12 @@ const Typography = createGlobalStyle`
         letter-spacing: 0.2rem;
         line-height: 1.2;
         text-transform: capitalize;
+        font-weight: 700;
+    }
+
+    h2, .h2 {
+        font-family: SansitaSwashed;
+        font-size: clamp(2.6rem, 6vw, 6.2rem);
     }
 
     .quote-display {

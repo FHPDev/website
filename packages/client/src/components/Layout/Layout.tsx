@@ -10,9 +10,9 @@ const Layout = ({ children }) => {
             <GlobalStyles />
             <Typography />
             <Header />
-            <div>
-                <main>{children}</main>
-            </div>
+            <main>
+                {children}
+            </main>
         </>
     )
 }
