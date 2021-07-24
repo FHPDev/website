@@ -1,8 +1,11 @@
 import { graphql, Link } from 'gatsby'
 import PortableText from '@sanity/block-content-to-react'
 import BlogHero from '../components/Hero/BlogHero'
+import getYouTubeId from 'get-youtube-id'
+import YouTube from 'react-youtube'
 
 const SingleBlogTemplate = ({ data: { post } }) => {
+  console.log(post)
   const serializers = {
     types: {
       block(props) {
@@ -22,10 +25,14 @@ const SingleBlogTemplate = ({ data: { post } }) => {
       bodyImage: ({ node }) => (
         <img src={node.asset.url} alt={node.alt ? node.alt : '#'} />
       ),
-    },
+      youtube: ({ node }) => {
+        const { url } = node
+        const id = getYouTubeId(url)
+        return (<YouTube videoId={id} />)
+      }
+    }
   }
 
-  console.log(post._rawBody)
 
   return (
     <>
@@ -48,31 +55,29 @@ export default SingleBlogTemplate
 export const query = graphql`
   query($slug: String!) {
     post: sanityPost(slug: {current: {eq: $slug}}) {
-        author {
-          name
-          slug {
-            current
-          }
-          image {
-            asset {
-              gatsbyImageData(placeholder: DOMINANT_COLOR, 
-                width: 100
-                height: 100
-                formats: [AUTO, WEBP, AVIF])
-            }
-          }
+      author {
+        name
+        slug {
+          current
         }
-        mainImage {
+        image {
           asset {
-            gatsbyImageData(placeholder: BLURRED)
+            gatsbyImageData(placeholder: DOMINANT_COLOR, width:100, height: 100)
           }
         }
-        title
-        categories {
-          title
-        }
-        _rawBody(resolveReferences: {maxDepth: 10})
-        publishedAt
       }
+      mainImage {
+        asset {
+          gatsbyImageData(placeholder: BLURRED)
+        }
+      }
+      title
+      categories {
+        title
+      }
+      _rawBody(resolveReferences: {maxDepth: 10})
+      publishedAt
+    }
   }
 `
+

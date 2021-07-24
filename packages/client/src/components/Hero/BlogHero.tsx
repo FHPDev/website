@@ -23,8 +23,8 @@ const BlogHero = ({ image, title, author, tags, date }) => {
                     backgroundSize: 'contain',
                     backgroundPosition: 'right center',
                     backgroundRepeat: 'no-repeat',
-                    backgroundAttachment: 'fixed',
-                    position: 'revert'
+                    position: 'revert',
+                    width: '50%'
                 }}
             />
         </StyledBlogHero>
