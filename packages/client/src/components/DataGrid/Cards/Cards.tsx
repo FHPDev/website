@@ -1,4 +1,4 @@
-import { Link } from "gatsby"
+import { Link } from 'gatsby'
 
 const Cards = ({ data, type }) => {
     console.log(data)

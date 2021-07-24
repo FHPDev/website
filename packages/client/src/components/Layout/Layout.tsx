@@ -9,7 +9,7 @@ const Layout = ({ children }) => {
         <>
             <GlobalStyles />
             <Typography />
-            <Header />
+            {process.env.DEV_ENV === 'true' && <Header />}
             <main>
                 {children}
             </main>

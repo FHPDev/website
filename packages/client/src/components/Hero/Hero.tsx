@@ -1,15 +1,17 @@
 import BackgroundImage from 'gatsby-background-image'
+import { convertToBgImage } from "gbimage-bridge"
 
 const BannerImage = ({ image, children, className, filter }) => {
-    const renderedImage = [
-        image,
-        `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.25))`,
-    ].reverse()
+    const bgImage = convertToBgImage(image)
+    // const renderedImage = [
+    //     ...bgImage,
+    //     `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.25))`,
+    // ].reverse()
 
     return (
         <BackgroundImage
             Tag="div"
-            fluid={filter ? renderedImage : image}
+            {...bgImage}
             className={className}
             style={{
                 backgroundSize: 'cover',
