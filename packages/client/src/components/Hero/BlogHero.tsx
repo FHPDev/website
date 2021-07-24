@@ -4,7 +4,6 @@ import StyledBlogHero from './BlogHeroStyles'
 import AuthorCard from '../AuthorCard/AuthorCard'
 
 const BlogHero = ({ image, title, author, tags, date }) => {
-
     const bgImage = convertToBgImage(image)
 
     return (
