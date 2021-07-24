@@ -1,18 +1,45 @@
 import { graphql, Link } from 'gatsby'
-
+import PortableText from '@sanity/block-content-to-react'
 import BlogHero from '../components/Hero/BlogHero'
 
 const SingleBlogTemplate = ({ data: { post } }) => {
-  console.log('blog data', post)
+  const serializers = {
+    types: {
+      block(props) {
+        switch (props.node.style) {
+          case 'h1':
+            return <h1>{props.children}</h1>
+          case 'h2':
+            return <h2>{props.children}</h2>
+          case 'h3':
+            return <h3>{props.children}</h3>
+
+          default:
+            return <p>{props.children}</p>
+        }
+      },
+      // eslint-disable-next-line react/display-name
+      bodyImage: ({ node }) => (
+        <img src={node.asset.url} alt={node.alt ? node.alt : '#'} />
+      ),
+    },
+  }
+
+  console.log(post._rawBody)
 
   return (
-    <BlogHero
-      title={post.title}
-      image={post.mainImage.asset.gatsbyImageData}
-      author={post.author}
-      tags={post.categories}
-      date={post.publishedAt}
-    />
+    <>
+      <BlogHero
+        title={post.title}
+        image={post.mainImage.asset.gatsbyImageData}
+        author={post.author}
+        tags={post.categories}
+        date={post.publishedAt}
+      />
+      <div className="container">
+        <PortableText blocks={post._rawBody} serializers={serializers} />
+      </div>
+    </>
   )
 }
 
