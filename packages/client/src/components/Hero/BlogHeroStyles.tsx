@@ -12,6 +12,7 @@ const StyledBlogHero = styled.div`
         display: flex;
         align-items: flex-end;
         padding: 8rem 2rem;
+        color: var(--seagull)
     }
 
     h1 {

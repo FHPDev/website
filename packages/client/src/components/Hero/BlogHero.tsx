@@ -1,16 +1,18 @@
 import BackgroundImage from 'gatsby-background-image'
 import { convertToBgImage } from "gbimage-bridge"
 import StyledBlogHero from './BlogHeroStyles'
+import AuthorCard from '../AuthorCard/AuthorCard'
 
-const BlogHero = ({ image, title, author }) => {
-    console.log(author)
+const BlogHero = ({ image, title, author, tags, date }) => {
+
     const bgImage = convertToBgImage(image)
+
     return (
         <StyledBlogHero>
             <div className="header">
                 <div>
                     <h1>{title}</h1>
-                    <div><span>{author.name}</span></div>
+                    <AuthorCard author={author} tags={tags} date={date} />
                 </div>
             </div>
 
@@ -25,7 +27,6 @@ const BlogHero = ({ image, title, author }) => {
                     position: 'revert'
                 }}
             />
-
         </StyledBlogHero>
     )
 }
