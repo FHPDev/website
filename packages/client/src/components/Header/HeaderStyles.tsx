@@ -6,6 +6,9 @@ const StyledHeader = styled.header`
     background: rgba(255,255,255,0.24);
     width: 100%;
     color: var(--black);
+    @supports (backdrop-filter: grayscale(30%)) {
+        backdrop-filter: grayscale(100%);
+      }
 
     .header-container {
         max-width: 1400px;
@@ -14,7 +17,6 @@ const StyledHeader = styled.header`
         width: 100%;
         display: flex;
         justify-content: space-between;
-        
     }
 
     nav {

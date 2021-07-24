@@ -1,6 +1,6 @@
 import BackgroundImage from 'gatsby-background-image'
 
-const BannerImage = ({ image, children, className }) => {
+const BannerImage = ({ image, children, className, filter }) => {
     const renderedImage = [
         image,
         `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.25))`,
@@ -9,13 +9,13 @@ const BannerImage = ({ image, children, className }) => {
     return (
         <BackgroundImage
             Tag="div"
-            fluid={renderedImage}
+            fluid={filter ? renderedImage : image}
             className={className}
             style={{
                 backgroundSize: 'cover',
                 backgroundPosition: 'center bottom',
                 backgroundRepeat: 'no-repeat',
-                minHeight: 'clamp(34vh, 60vw, 78vh)',
+                minHeight: 'clamp(34vh, 60vw, 94vh)',
                 backgroundAttachment: 'fixed',
                 display: 'flex',
                 alignItems: 'center',

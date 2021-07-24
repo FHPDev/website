@@ -11,6 +11,7 @@ const GlobalStyles = createGlobalStyle`
     --white: #C3FAEC;
     --black: #222;
     --radius: .3rem;
+    --cast: .2rem;
   }
   *, *:before, *:after {
     box-sizing: border-box;

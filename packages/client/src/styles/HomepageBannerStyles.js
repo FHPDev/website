@@ -6,8 +6,9 @@ const HomepageBannerStyles = styled.div`
       backdrop-filter: blur(20px);
     }
     background-color: rgba(136, 96, 208, 0.7);
-    padding: clamp(1rem, 3vw, 6rem);
+    padding: clamp(1rem, 6vw, 6rem);
     margin-top: 7.7rem;
+    border: 1px solid var(--black);
 
     @media (max-width: 768px) {
         margin: 0 auto;
@@ -16,6 +17,7 @@ const HomepageBannerStyles = styled.div`
 
   h1 {
     font-weight: 700;
+    font-size: clamp(4.6rem, 6vw, 10rem);
     text-shadow: -1px -1px 0 var(--amethyst), 1px -1px 0 var(--amethyst), -1px 1px 0 var(--amethyst), 1px 1px 0 var(--amethyst);
   }
 `;

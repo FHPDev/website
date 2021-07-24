@@ -51,11 +51,9 @@ const IndexPage = () => {
           <p>{heroSubtitle}</p>
         </HomepageBannerStyles>
       </BannerImage>
-      <section className="container">
-        <p className="quote-display">
-          Prow scuttle parrel provost Sail ho shrouds spirits boom mizzenmast yardarm. Pinnace holystone mizzenmast quarter crow's nest nipperkin grog yardarm hempen halter furl. Swab barque interloper chantey doubloon starboard grog black jack gangway rutters.
-        </p>
-      </section>
+      <p className="quote-display container">
+        Prow scuttle parrel provost Sail ho shrouds spirits boom mizzenmast yardarm. Pinnace holystone mizzenmast quarter crow's nest nipperkin grog yardarm hempen halter furl. Swab barque interloper chantey doubloon starboard grog black jack gangway rutters.
+      </p>
     </>
   )
 }

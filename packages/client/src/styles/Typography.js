@@ -45,9 +45,15 @@ const Typography = createGlobalStyle`
     }
 
     .quote-display {
-        font-size: clamp(1.8rem, 3vw, 2.4rem);
+        font-size: clamp(1.8rem, 3vw, 2rem);
         text-align: center;
         font-style: italic;
+        position: relative;
+        top: -4rem;
+        background-color: var(--seagull);
+        border-radius: 1rem;
+        box-shadow: 0 0 .6rem rgba(0, 0, 0, .4);
+        padding: 2rem 1rem;
     }
 
     a {
