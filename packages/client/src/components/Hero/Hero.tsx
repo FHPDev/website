@@ -1,7 +1,9 @@
 import BackgroundImage from 'gatsby-background-image'
 import { convertToBgImage } from "gbimage-bridge"
+import { FC } from 'react'
+import { HeroI } from './Interfaces'
 
-const BannerImage = ({ image, children, className, filter }) => {
+const BannerImage: FC<HeroI> = ({ image, children, className, filter }) => {
     const bgImage = convertToBgImage(image)
     // const renderedImage = [
     //     ...bgImage,

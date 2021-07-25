@@ -3,8 +3,10 @@ import 'normalize.css'
 import GlobalStyles from '../../styles/GlobalStyles'
 import Typography from '../../styles/Typography'
 import Header from '../Header/Header'
+import { FC } from 'react'
+import { LayoutI } from './Interfaces'
 
-const Layout = ({ children }) => {
+const Layout: FC<LayoutI> = ({ children }) => {
     return (
         <>
             <GlobalStyles />

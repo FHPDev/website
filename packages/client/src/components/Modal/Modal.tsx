@@ -9,20 +9,19 @@ class Modal extends Component {
     el: any
     ModalRef: any
 
-    constructor(props) {
+    constructor(props: {} | Readonly<{}>) {
         super(props)
         this.ModalRef = createRef();
         this.el = typeof document !== `undefined` ? document.createElement('div') : null
     }
 
     componentDidMount() {
-        console.log(this.ModalRef.current)
-        portalRoot.appendChild(this.el)
+        { portalRoot && portalRoot.appendChild(this.el) }
         focusTrap(this.ModalRef.current);
     }
 
     componentWillUnmount() {
-        portalRoot.removeChild(this.el)
+        { portalRoot && portalRoot.removeChild(this.el) }
     }
 
     handleClick = () => {

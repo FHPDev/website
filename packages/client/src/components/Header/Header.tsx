@@ -13,7 +13,7 @@ const Header = () => {
                 <p>OH HELOO</p>
                 <nav>
                     <button onFocus={handleOnClick} onMouseOver={handleOnClick}>WAZZAP</button>
-                    {subnavOpen && <div className="ballz"> MAI BALLZ</div>}
+                    {subnavOpen && <div className="ballz"> OH HAI</div>}
                 </nav>
 
             </div>

@@ -1,14 +1,17 @@
+import { FC } from 'react'
 import { Link } from 'gatsby'
 
-const Cards = ({ data, type }) => {
-    console.log(data)
+import { CardI } from './Interfaces'
+
+const Cards: FC<CardI> = ({ data, type }) => {
 
     return (
         <Link to={`./${data.slug.current}`}>
             <div>
                 <p className="h2">{data.title}</p>
             </div>
-        </Link>)
+        </Link>
+    )
 }
 
 export default Cards

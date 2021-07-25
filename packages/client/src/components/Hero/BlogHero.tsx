@@ -1,9 +1,12 @@
+import { FC } from 'react'
 import BackgroundImage from 'gatsby-background-image'
-import { convertToBgImage } from "gbimage-bridge"
+import { convertToBgImage } from 'gbimage-bridge'
 import StyledBlogHero from './BlogHeroStyles'
 import AuthorCard from '../AuthorCard/AuthorCard'
 
-const BlogHero = ({ image, title, author, tags, date }) => {
+import { BlogHeroI } from './Interfaces'
+
+const BlogHero: FC<BlogHeroI> = ({ image, title, author, tags, date }) => {
     const bgImage = convertToBgImage(image)
 
     return (

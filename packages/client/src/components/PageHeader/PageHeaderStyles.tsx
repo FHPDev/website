@@ -1,6 +1,5 @@
 import styled from "styled-components";
 
-
 const StyledPageHeader = styled.div`
     margin: 2rem 0 4rem;
     border-bottom: 2px solid var(--pGray);
