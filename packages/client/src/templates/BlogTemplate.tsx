@@ -38,7 +38,7 @@ const SingleBlogTemplate = ({ data: { post } }) => {
     <>
       <BlogHero
         title={post.title}
-        image={post.mainImage.asset.gatsbyImageData}
+        image={post.mainImage}
         author={post.author}
         tags={post.categories}
         date={post.publishedAt}
@@ -61,15 +61,11 @@ export const query = graphql`
           current
         }
         image {
-          asset {
-            gatsbyImageData(placeholder: DOMINANT_COLOR, width:100, height: 100)
-          }
+          ...ImageWithPreview
         }
       }
       mainImage {
-        asset {
-          gatsbyImageData(placeholder: BLURRED)
-        }
+        ...ImageWithPreview
       }
       title
       categories {

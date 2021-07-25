@@ -40,7 +40,7 @@ const Typography = createGlobalStyle`
         font-family: SansitaSwashed;
         font-size: clamp(4.6rem, 6vw, 8.4rem);
         letter-spacing: 0.2rem;
-        line-height: 1.2;
+        line-height: 1;
         text-transform: capitalize;
         font-weight: 700;
     }

@@ -1,19 +1,18 @@
-import BackgroundImage from 'gatsby-background-image'
-import { convertToBgImage } from "gbimage-bridge"
+import { BgImage } from "gbimage-bridge"
+import { getImage } from 'gatsby-plugin-image'
 import { FC } from 'react'
 import { HeroI } from './Interfaces'
 
 const BannerImage: FC<HeroI> = ({ image, children, className, filter }) => {
-    const bgImage = convertToBgImage(image)
-    // const renderedImage = [
-    //     ...bgImage,
-    //     `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.25))`,
-    // ].reverse()
+    const bgImage = getImage(image)
+    const renderedImage = [
+        bgImage,
+        `linear-gradient(90deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.15))`,
+    ].reverse()
 
     return (
-        <BackgroundImage
-            Tag="div"
-            {...bgImage}
+        <BgImage
+            image={filter ? renderedImage : bgImage}
             className={className}
             style={{
                 backgroundSize: 'cover',
@@ -28,7 +27,7 @@ const BannerImage: FC<HeroI> = ({ image, children, className, filter }) => {
             }}
         >
             {children}
-        </BackgroundImage>
+        </BgImage>
     )
 }
 

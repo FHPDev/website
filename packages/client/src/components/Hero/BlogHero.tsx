@@ -3,6 +3,7 @@ import BackgroundImage from 'gatsby-background-image'
 import { convertToBgImage } from 'gbimage-bridge'
 import StyledBlogHero from './BlogHeroStyles'
 import AuthorCard from '../AuthorCard/AuthorCard'
+import Image from 'gatsby-plugin-sanity-image'
 
 import { BlogHeroI } from './Interfaces'
 
@@ -18,15 +19,16 @@ const BlogHero: FC<BlogHeroI> = ({ image, title, author, tags, date }) => {
                 </div>
             </div>
 
-            <BackgroundImage
+            <Image
                 Tag="div"
-                {...bgImage}
+                {...image}
                 style={{
-                    backgroundSize: 'contain',
-                    backgroundPosition: 'right center',
+                    objectFit: 'cover',
+                    backgroundPosition: 'right top',
                     backgroundRepeat: 'no-repeat',
-                    position: 'revert',
-                    width: '50%'
+                    position: 'initial',
+                    width: '50%',
+                    height: '100vh'
                 }}
             />
         </StyledBlogHero>

@@ -1,9 +1,11 @@
 import React from 'react';
 import GlobalStyles from '../src/styles/GlobalStyles'
+import TypographyStyles from '../src/styles/Typography'
 
 export const decorators = [
   Story => (
     <>
+      <TypographyStyles />
       <GlobalStyles />
       <Story />
     </>

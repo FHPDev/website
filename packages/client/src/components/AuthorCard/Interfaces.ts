@@ -9,6 +9,8 @@ export interface AuthorCardI {
             }
         }
     }
-    tags: [{}]
+    tags: [{
+        title: string
+    }]
     date: String
 }

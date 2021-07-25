@@ -10,6 +10,10 @@ const HomepageBannerStyles = styled.div`
     margin-top: 7.7rem;
     border: 1px solid var(--black);
 
+    @media (min-width: 768px) {
+      width: clamp(70vw, 6vw, 60vw);
+    }
+
     @media (max-width: 768px) {
         margin: 0 auto;
         text-align: center;

@@ -23,6 +23,7 @@
     "gatsby-plugin-offline": "^4.9.0",
     "gatsby-plugin-portal": "^1.0.7",
     "gatsby-plugin-react-helmet": "^4.9.0",
+    "gatsby-plugin-sanity-image": "^0.8.0",
     "gatsby-plugin-sharp": "^3.9.0",
     "gatsby-plugin-styled-components": "^4.10.0",
     "gatsby-source-filesystem": "^3.9.0",
