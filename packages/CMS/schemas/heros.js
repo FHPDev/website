@@ -25,5 +25,10 @@ export default {
                 hotspot: true,
             },
         },
+        {
+            name: 'setFilter',
+            title: 'Set Hero Filter',
+            type: 'boolean'
+        }
     ]
 }

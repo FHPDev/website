@@ -16,6 +16,7 @@ const IndexPage = () => {
         hero {
           heroTitle
           heroSubtitle
+          setFilter
           image {
             asset {
               gatsbyImageData(placeholder: BLURRED)
@@ -35,11 +36,11 @@ const IndexPage = () => {
 
   }, [])
 
-  const { page: { pageName, hero: { heroTitle, heroSubtitle, image } } } = data
+  const { page: { pageName, hero: { heroTitle, heroSubtitle, image, setFilter } } } = data
   return (
     <>
       <Seo title={pageName} />
-      <BannerImage image={image.asset.gatsbyImageData} >
+      <BannerImage image={image.asset.gatsbyImageData} filter={setFilter}>
         <HomepageBannerStyles>
           <h1>{heroTitle}</h1>
           <p>{heroSubtitle}</p>
