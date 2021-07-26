@@ -4,31 +4,7 @@ import Seo from "../components/seo"
 import PageHeader from "../components/PageHeader/PageHeader"
 import DataGrid from "../components/DataGrid/DataGrid"
 
-const SecondPage = () => {
-  const data = useStaticQuery(
-    graphql`
-    query PostQuery {
-      allSanityPost(sort: {fields: _createdAt, order: DESC}) {
-        posts: nodes {
-          id
-          slug {
-            current
-          }
-          title
-          author {
-            name
-            slug {
-              current
-            }
-          }
-          categories {
-            title
-          }
-        }
-      }
-    }
-    `
-  )
+const SecondPage = ({ data }) => {
   const { allSanityPost: { posts } } = data
   return (
     <>
@@ -40,5 +16,28 @@ const SecondPage = () => {
     </>
   )
 }
+
+export const query = graphql`
+query PostQuery($tag: [String]) {
+  allSanityPost(sort: {fields: _createdAt, order: DESC} filter: { categories: { elemMatch: { title: { in: $tag } } } }) {
+    posts: nodes {
+      id
+      slug {
+        current
+      }
+      title
+      author {
+        name
+        slug {
+          current
+        }
+      }
+      categories {
+        title
+      }
+    }
+  }
+}
+`
 
 export default SecondPage

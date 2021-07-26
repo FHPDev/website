@@ -6,7 +6,7 @@ import { CardI } from './Interfaces'
 const Cards: FC<CardI> = ({ data, type }) => {
 
     return (
-        <Link to={`./${data.slug.current}`}>
+        <Link to={`/blog/${data.slug.current}`}>
             <div>
                 <p className="h2">{data.title}</p>
             </div>

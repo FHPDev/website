@@ -9,11 +9,12 @@ const StyledHeader = styled.header`
         width: 100%;
         color: var(--black);
         position: absolute;
+        display: flex;
     }
 
     @supports (backdrop-filter: grayscale(30%)) {
         backdrop-filter: grayscale(100%);
-      }
+    }
 
     .header-container {
         max-width: 1400px;
