@@ -1,11 +1,16 @@
 import styled from 'styled-components'
 
 const StyledHeader = styled.header`
-    position: absolute;
-    z-index: 10;
-    background: rgba(255,255,255,0.24);
-    width: 100%;
-    color: var(--black);
+    display: none;
+    
+    @media (min-width: 769px) {
+        z-index: 10;
+        background: rgba(255,255,255,0.24);
+        width: 100%;
+        color: var(--black);
+        position: absolute;
+    }
+
     @supports (backdrop-filter: grayscale(30%)) {
         backdrop-filter: grayscale(100%);
       }
