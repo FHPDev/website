@@ -24,9 +24,6 @@ const AuthorCard: FC<AuthorCardI> = ({ author, tags, date }) => {
             <div className="metaData">
                 <span>{tags && `Writren By:`} {author.name}</span>
                 {formatedDate && <span>{`Posted On: `} {formatedDate}</span>}
-                {tags && tags.map(tag => {
-                    return <span>{tag.title}</span>
-                })}
             </div>
         </StyledAuthorCard>
     )
