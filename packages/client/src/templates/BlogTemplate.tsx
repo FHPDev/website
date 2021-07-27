@@ -40,7 +40,7 @@ const SingleBlogTemplate = ({ data: { post } }) => {
         title={post.title}
         image={post.mainImage}
         author={post.author}
-        tags={post.categories}
+        tags={post.tags}
         date={post.publishedAt}
       />
       <div className="container">
@@ -68,7 +68,7 @@ export const query = graphql`
         ...ImageWithPreview
       }
       title
-      categories {
+      tags {
         title
       }
       _rawBody(resolveReferences: {maxDepth: 10})

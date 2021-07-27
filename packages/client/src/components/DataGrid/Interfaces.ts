@@ -4,5 +4,5 @@ export interface DataGridI {
     data: {
         map: ({ }) => JSX.Element
     }
-    type: String
+    cardType: String
 }

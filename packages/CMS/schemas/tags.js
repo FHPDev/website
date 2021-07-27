@@ -1,7 +1,10 @@
+import {IoPricetags} from 'react-icons/io'
+
 export default {
-  name: 'category',
-  title: 'Category',
+  name: 'tags',
+  title: 'Tags',
   type: 'document',
+  icon: IoPricetags,
   fields: [
     {
       name: 'title',

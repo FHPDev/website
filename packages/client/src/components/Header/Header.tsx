@@ -1,3 +1,4 @@
+import { Link } from "gatsby"
 import UseNavigation from "../../library/UseNavigation"
 import StyledHeader from "./HeaderStyles"
 
@@ -12,8 +13,9 @@ const Header = () => {
             <div className="header-container">
                 <p>OH HELOO</p>
                 <nav>
-                    <button onFocus={handleOnClick} onMouseOver={handleOnClick}>WAZZAP</button>
-                    {subnavOpen && <div className="ballz"> OH HAI</div>}
+                    {/* <button onFocus={handleOnClick} onMouseOver={handleOnClick}>WAZZAP</button> */}
+                    <Link to='/blog'>Blog</Link>
+                    {/* {subnavOpen && <div className="ballz"> OH HAI</div>} */}
                 </nav>
 
             </div>

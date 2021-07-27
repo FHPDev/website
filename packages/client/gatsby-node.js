@@ -33,7 +33,7 @@ exports.createPages = async ({ graphql, actions }) => {
 
   const tags = graphql(`
       query {
-        tags: allSanityCategory {
+        tags: allSanityTags {
           nodes {
             title
           }

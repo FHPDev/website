@@ -1,4 +1,4 @@
-export interface CardI {
+export interface LinkCardI {
     data: {
         slug: {
             current: string
@@ -6,5 +6,5 @@ export interface CardI {
         title: string
     }
 
-    type: string
+    cardType: string
 }

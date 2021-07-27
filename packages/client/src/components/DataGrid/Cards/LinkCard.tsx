@@ -1,9 +1,9 @@
 import { FC } from 'react'
 import { Link } from 'gatsby'
 
-import { CardI } from './Interfaces'
+import { LinkCardI } from './Interfaces'
 
-const Cards: FC<CardI> = ({ data, type }) => {
+const Cards: FC<LinkCardI> = ({ data, cardType }) => {
 
     return (
         <Link to={`/blog/${data.slug.current}`}>
