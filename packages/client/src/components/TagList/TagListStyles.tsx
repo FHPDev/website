@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 const StyledTagList = styled.ul`
     li {
-        font-size: 1.4rem;
+        font-size: 1.2rem;
         display: inline-block;
         font-weight: 600;
 
@@ -26,6 +26,10 @@ const StyledTagList = styled.ul`
 
         @keyframes pulse {
             0% { box-shadow: 0 0 0 0 var(--amethyst); }
+        }
+
+        &:not(:last-child) {
+            margin-right: 1rem;
         }
     }
 

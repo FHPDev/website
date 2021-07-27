@@ -3,7 +3,7 @@ import StyledTagList from './TagListStyles'
 
 const TagList = ({ tags, root }) => {
     return (
-        <StyledTagList>
+        <StyledTagList aria-label="tag list">
             {tags.map(tag => {
                 return (
                     <li>
