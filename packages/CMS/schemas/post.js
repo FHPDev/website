@@ -1,4 +1,4 @@
-import {BsFilePost} from 'react-icons/bs'
+import {BsFilePost} from 'react-icons/Bs'
 
 export default {
   name: 'post',

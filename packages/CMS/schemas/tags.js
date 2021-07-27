@@ -1,10 +1,10 @@
-import {IoPricetags} from 'react-icons/io'
+import {AiTwotoneTag} from 'react-icons/ai'
 
 export default {
   name: 'tags',
   title: 'Tags',
   type: 'document',
-  icon: IoPricetags,
+  icon: AiTwotoneTag,
   fields: [
     {
       name: 'title',
