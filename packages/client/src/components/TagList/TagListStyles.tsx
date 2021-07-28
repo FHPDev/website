@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 const StyledTagList = styled.ul`
+    padding: 1rem 0;
     li {
         font-size: 1.2rem;
         display: inline-block;

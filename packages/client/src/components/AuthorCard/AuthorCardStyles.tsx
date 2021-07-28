@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 const StyledAuthorCard = styled.div`
     display: flex;
-    padding: 2rem;
+    padding: 2rem 0;
     img {
         border-radius: 2rem;
         border: 3px solid var(--cfBlue);

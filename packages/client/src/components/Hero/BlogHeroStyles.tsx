@@ -7,14 +7,15 @@ const StyledBlogHero = styled.div`
     width: 100%;
 
     @media(min-width: 769px) {
-        flex-direction: row; 
+        flex-direction: ${props => props.portrate ? 'row' : 'column'}; 
     }
+
     .blog-hero_image {
         width: 100%;
-        height: 30%;
+        height: auto;
 
         @media (min-width: 769px) {
-            width: 50%;
+            width: ${props => props.portrate ? '50%' : '100%'}; 
             height: 100vh;
             background-position: center;
         }
@@ -30,14 +31,21 @@ const StyledBlogHero = styled.div`
 
         @media (min-width: 769px) {
             align-items: flex-end;
-            padding: 50vh 2rem 2rem;
-            width: 50%;
-            height: 100vh;
+            padding: 0 4rem 2rem;
+            padding-top: ${props => props.portrate ? '50vh' : '240px'};
+            width: ${props => props.portrate ? '50%' : '100%'}; 
+            height: ${props => props.portrate ? '100vh' : '10vh'}; 
         }
-    }
-
-    h1 {
-        color: var(--seagull);
+        
+        .content-container {
+            @media (min-width: 769px) {
+                display: flex;
+                flex-direction: ${props => props.portrate ? 'column' : 'row'};
+                align-items: ${props => props.portrate ? 'column' : 'center'};
+                justify-content: space-between;
+                width: 100%;
+            }
+        }
     }
 `
 export default StyledBlogHero

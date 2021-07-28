@@ -1,17 +1,29 @@
-import { graphql, Link, navigate, useStaticQuery } from "gatsby"
+import { graphql, Link } from "gatsby"
 
 import Seo from "../components/seo"
 import PageHeader from "../components/PageHeader/PageHeader"
-import DataGrid from "../components/DataGrid/DataGrid"
 
 const SecondPage = ({ data }) => {
   const { allSanityPost: { posts } } = data
+  console.log(posts)
   return (
     <>
       <Seo title="BLOG" />
       <section className="container">
         <PageHeader title="the blog page" text="blog title text longer string. Yadda yadda" />
-        <DataGrid data={posts} cardType="link" />
+        <ul>
+          {posts.map(post => {
+            return (
+              <li>
+                <Link to={`/blog/${post.slug.current}`}>
+                  <div>
+                    <p className="h2">{post.title}</p>
+                  </div>
+                </Link>
+              </li>
+            )
+          })}
+        </ul>
       </section>
     </>
   )

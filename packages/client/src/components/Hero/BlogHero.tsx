@@ -4,17 +4,15 @@ import AuthorCard from '../AuthorCard/AuthorCard'
 import Image from 'gatsby-plugin-sanity-image'
 
 import { BlogHeroI } from './Interfaces'
-import TagList from '../TagList/TagList'
 
-const BlogHero: FC<BlogHeroI> = ({ image, title, author, tags, date }) => {
+const BlogHero: FC<BlogHeroI> = ({ image, title, author, tags, date, portrate }) => {
 
     return (
-        <StyledBlogHero>
+        <StyledBlogHero portrate={portrate}>
             <div className="header">
-                <div>
+                <div className="content-container">
                     <h1>{title}</h1>
                     <AuthorCard author={author} tags={tags} date={date} />
-                    <TagList tags={tags} root='blog' />
                 </div>
             </div>
 

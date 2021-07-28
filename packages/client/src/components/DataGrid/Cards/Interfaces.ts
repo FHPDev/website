@@ -5,6 +5,4 @@ export interface LinkCardI {
         }
         title: string
     }
-
-    cardType: string
 }

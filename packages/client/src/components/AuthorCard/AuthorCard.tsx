@@ -3,7 +3,7 @@ import Image from 'gatsby-plugin-sanity-image'
 import dateFormat from '../../library/dateFormat';
 
 import StyledAuthorCard from './AuthorCardStyles';
-
+import TagList from '../TagList/TagList';
 import { AuthorCardI } from './Interfaces';
 
 const AuthorCard: FC<AuthorCardI> = ({ author, tags, date }) => {
@@ -24,6 +24,7 @@ const AuthorCard: FC<AuthorCardI> = ({ author, tags, date }) => {
             <div className="metaData">
                 <span>{tags && `Writren By:`} {author.name}</span>
                 {formatedDate && <span>{`Posted On: `} {formatedDate}</span>}
+                {tags && <TagList tags={tags} root='blog' />}
             </div>
         </StyledAuthorCard>
     )

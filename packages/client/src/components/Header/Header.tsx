@@ -15,6 +15,7 @@ const Header = () => {
                 <nav>
                     {/* <button onFocus={handleOnClick} onMouseOver={handleOnClick}>WAZZAP</button> */}
                     <Link to='/blog'>Blog</Link>
+                    <Link to='/people'>People</Link>
                     {/* {subnavOpen && <div className="ballz"> OH HAI</div>} */}
                 </nav>
 

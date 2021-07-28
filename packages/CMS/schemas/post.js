@@ -35,6 +35,11 @@ export default {
       },
     },
     {
+      name: 'isImageVertical',
+      title: 'Vertical Image',
+      type: 'boolean',
+    },
+    {
       name: 'tags',
       title: 'Tags',
       type: 'array',

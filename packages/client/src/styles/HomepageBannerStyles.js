@@ -8,7 +8,9 @@ const HomepageBannerStyles = styled.div`
     background-color: rgba(136, 96, 208, 0.7);
     padding: clamp(1rem, 6vw, 6rem);
     margin-top: 7.7rem;
-    border: 1px solid var(--black);
+    border-top: 1px solid var(--black);
+    border-right: 1px solid var(--black);
+    border-bottom: 1px solid var(--black);
 
     @media(min-width: 768px) {
       width: clamp(56vw);

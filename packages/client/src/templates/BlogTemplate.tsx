@@ -5,7 +5,6 @@ import getYouTubeId from 'get-youtube-id'
 import YouTube from 'react-youtube'
 
 const SingleBlogTemplate = ({ data: { post } }) => {
-  console.log(post)
   const serializers = {
     types: {
       block(props) {
@@ -28,7 +27,7 @@ const SingleBlogTemplate = ({ data: { post } }) => {
       youtube: ({ node }) => {
         const { url } = node
         const id = getYouTubeId(url)
-        return (<YouTube videoId={id} />)
+        return (<YouTube videoId={id} containerClassName='youtube-blog' />)
       }
     }
   }
@@ -42,6 +41,7 @@ const SingleBlogTemplate = ({ data: { post } }) => {
         author={post.author}
         tags={post.tags}
         date={post.publishedAt}
+        portrate={post.isImageVertical}
       />
       <div className="container">
         <PortableText blocks={post._rawBody} serializers={serializers} />
@@ -67,6 +67,7 @@ export const query = graphql`
       mainImage {
         ...ImageWithPreview
       }
+      isImageVertical
       title
       tags {
         title

@@ -95,16 +95,30 @@ const GlobalStyles = createGlobalStyle`
   }
 
   .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap; /* added line */
+    border: 0;
+  }
+
+  .youtube-blog {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    height: 0;
+
+    iframe {
       position: absolute;
-      width: 1px;
-      height: 1px;
-      padding: 0;
-      margin: -1px;
-      overflow: hidden;
-      clip: rect(0, 0, 0, 0);
-      white-space: nowrap; /* added line */
-      border: 0;
-}
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
 `
 
 export default GlobalStyles
