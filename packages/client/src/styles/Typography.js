@@ -48,6 +48,7 @@ const Typography = createGlobalStyle`
     h2, .h2 {
         font-family: SansitaSwashed;
         font-size: clamp(2.6rem, 6vw, 6.2rem);
+        text-transform: capitalize;
     }
 
     .quote-display {

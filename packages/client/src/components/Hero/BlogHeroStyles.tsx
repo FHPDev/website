@@ -10,6 +10,10 @@ const StyledBlogHero = styled.div`
         flex-direction: ${props => props.portrate ? 'row' : 'column'}; 
     }
 
+    h1 {
+        text-shadow: -3px 4px 7px black;
+    }
+
     .blog-hero_image {
         width: 100%;
         height: auto;

@@ -5,9 +5,6 @@ import StyledDataGrid from "./DataGridStyles";
 import { DataGridI } from "./Interfaces"
 
 const DataGrid: FC<DataGridI> = ({ data, cardType }) => {
-    let cards;
-    console.log('card data', data)
-
     return (
         <StyledDataGrid cardType={cardType}>
             {data.map(post => {
