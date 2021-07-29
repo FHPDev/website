@@ -23,6 +23,14 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-source-stripe`,
+      options: {
+        objects: ['Balance', 'BalanceTransaction', 'Product', 'ApplicationFee', 'Sku', 'Subscription'],
+        secretKey: process.env.STRIPE_SECRET,
+        downloadFiles: true,
+      }
+    },
+    {
       resolve: `gatsby-plugin-sanity-image`,
       options: {
         projectId: "1fg8plz5",
