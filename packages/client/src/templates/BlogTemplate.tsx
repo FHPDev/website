@@ -32,12 +32,13 @@ const SingleBlogTemplate = ({ data: { post } }) => {
     }
   }
 
+  console.log(post.mainImage)
 
   return (
     <>
       <BlogHero
         title={post.title}
-        image={post.mainImage}
+        image={post.mainImage.asset.gatsbyImageData}
         author={post.author}
         tags={post.tags}
         date={post.publishedAt}
@@ -65,7 +66,9 @@ export const query = graphql`
         }
       }
       mainImage {
-        ...ImageWithPreview
+        asset {
+          gatsbyImageData
+        }
       }
       isImageVertical
       title

@@ -2,11 +2,12 @@ import { FC } from 'react'
 import StyledBlogHero from './BlogHeroStyles'
 import AuthorCard from '../AuthorCard/AuthorCard'
 import Image from 'gatsby-plugin-sanity-image'
-
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { BlogHeroI } from './Interfaces'
 
 const BlogHero: FC<BlogHeroI> = ({ image, title, author, tags, date, portrate }) => {
-
+    const rederImage = getImage(image)
+    console.log(rederImage)
     return (
         <StyledBlogHero portrate={portrate}>
             <div className="header">
@@ -16,15 +17,10 @@ const BlogHero: FC<BlogHeroI> = ({ image, title, author, tags, date, portrate })
                 </div>
             </div>
 
-            <Image
+            <GatsbyImage
                 Tag="div"
-                {...image}
+                image={rederImage}
                 className="blog-hero_image"
-                style={{
-                    objectFit: 'cover',
-                    backgroundRepeat: 'no-repeat',
-                    position: 'initial',
-                }}
             />
         </StyledBlogHero>
     )
