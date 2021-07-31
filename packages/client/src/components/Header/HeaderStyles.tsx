@@ -5,10 +5,9 @@ const StyledHeader = styled.header`
     
     @media (min-width: 769px) {
         z-index: 10;
-        background: rgba(255,255,255,0.24);
+        background-color: var(--pGray);
         width: 100%;
         color: var(--black);
-        position: absolute;
         display: flex;
     }
 

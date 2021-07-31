@@ -20,7 +20,7 @@ const StyledBlogHero = styled.div`
 
         @media (min-width: 769px) {
             width: ${props => props.portrate ? '50%' : '100%'}; 
-            height: 100vh;
+            height: calc(100vh - 80px);
             background-position: center;
         }
     }
@@ -38,7 +38,7 @@ const StyledBlogHero = styled.div`
             padding: 0 4rem 2rem;
             padding-top: ${props => props.portrate ? '50vh' : '240px'};
             width: ${props => props.portrate ? '50%' : '100%'}; 
-            height: ${props => props.portrate ? '100vh' : '10vh'}; 
+            height: ${props => props.portrate ? 'calc(100vh - 80px)' : '10vh'}; 
         }
         
         .content-container {

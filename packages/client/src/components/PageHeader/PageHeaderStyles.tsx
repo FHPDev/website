@@ -1,9 +1,9 @@
 import styled from "styled-components";
 
 const StyledPageHeader = styled.div`
-    margin: 2rem 0 4rem;
+    margin: 0 0 4rem;
     border-bottom: 2px solid var(--pGray);
-    padding: 4rem 0;
+    padding-bottom: 4rem;
 
     @media (min-width: 768px) {
         width: 50%;

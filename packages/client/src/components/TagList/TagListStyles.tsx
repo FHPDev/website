@@ -10,7 +10,7 @@ const StyledTagList = styled.ul`
         a {
             height: 100%;
             padding: .5rem 1rem;
-            color: var(--white);
+            color: #fff;
             background-color: var(--amethyst);
             border-radius: 10px;
             text-transform: uppercase;

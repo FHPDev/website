@@ -18,7 +18,7 @@ const BannerImage: FC<HeroI> = ({ image, children, className, filter }) => {
                 backgroundSize: 'cover',
                 backgroundPosition: 'center bottom',
                 backgroundRepeat: 'no-repeat',
-                minHeight: 'clamp(34vh, 60vw, 94vh)',
+                minHeight: 'clamp(34vh, 60vw, 90vh)',
                 backgroundAttachment: 'fixed',
                 display: 'flex',
                 alignItems: 'center',
