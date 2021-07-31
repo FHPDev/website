@@ -1,7 +1,7 @@
 import { FC } from 'react'
 import StyledBlogHero from './BlogHeroStyles'
 import AuthorCard from '../AuthorCard/AuthorCard'
-import Image from 'gatsby-plugin-sanity-image'
+
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { BlogHeroI } from './Interfaces'
 
