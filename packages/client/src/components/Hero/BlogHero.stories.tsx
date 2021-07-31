@@ -11,18 +11,23 @@ export default {
 
 const Template: ComponentStory<typeof BlogHero> = (args) => <BlogHero {...args} />;
 
-export const blogHeroPortrate = Template.bind({});
-blogHeroPortrate.args = {
+export const blogHeroportrait = Template.bind({});
+blogHeroportrait.args = {
     image: {
         images: {
             fallback: {
-                src: 'https://cdn.sanity.io/images/1fg8plz5/production/48ecf51b3a262b197190bc8900819ee78b032706-1920x736.jpg?w=1920&h=736&auto=format',
+                src: 'https://cdn.sanity.io/images/1fg8plz5/production/89b72ee41602b90f863df4da38433f349170142c-2552x1442.jpg?w=2552&h=1442&auto=format',
             }
         },
         layout: 'constrained',
         width: 100,
         height: 100
     },
+
+    title: 'Blog Hero',
+    portrait: false,
+    date: new Date(),
+    tags: [{ title: 'tag' }],
     author: {
         name: 'Ralphie Wiggam',
         image: {

@@ -5,11 +5,12 @@ import AuthorCard from '../AuthorCard/AuthorCard'
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { BlogHeroI } from './Interfaces'
 
-const BlogHero: FC<BlogHeroI> = ({ image, title, author, tags, date, portrate }) => {
+const BlogHero: FC<BlogHeroI> = ({ image, title, author, tags, date, portrait }) => {
+    console.log(image)
     const rederImage = getImage(image)
     console.log(rederImage)
     return (
-        <StyledBlogHero portrate={portrate}>
+        <StyledBlogHero portrait={portrait}>
             <div className="header">
                 <div className="content-container">
                     <h1>{title}</h1>

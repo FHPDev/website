@@ -13,7 +13,7 @@ const HomepageBannerStyles = styled.div`
     border-bottom: 1px solid var(--black);
 
     @media(min-width: 768px) {
-      width: clamp(56vw);
+      max-width: 60vw;
     }
 
     @media (max-width: 768px) {

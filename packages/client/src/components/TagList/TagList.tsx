@@ -1,4 +1,4 @@
-import { Link } from 'gatsby'
+import Link from 'gatsby-link'
 import StyledTagList from './TagListStyles'
 
 const TagList = ({ tags, root }) => {

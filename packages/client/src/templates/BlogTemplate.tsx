@@ -42,7 +42,7 @@ const SingleBlogTemplate = ({ data: { post } }) => {
         author={post.author}
         tags={post.tags}
         date={post.publishedAt}
-        portrate={post.isImageVertical}
+        portrait={post.isImageVertical}
       />
       <div className="container">
         <PortableText blocks={post._rawBody} serializers={serializers} />
@@ -62,7 +62,9 @@ export const query = graphql`
           current
         }
         image {
-          ...ImageWithPreview
+          asset {
+            gatsbyImageData(width: 100, height: 100)
+          }
         }
       }
       mainImage {

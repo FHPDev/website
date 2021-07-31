@@ -6,7 +6,7 @@ export interface BlogHeroI {
     author: Object
     tags: [String]
     date: String
-    portrate: boolean
+    portrait: boolean
 }
 
 export interface HeroI {

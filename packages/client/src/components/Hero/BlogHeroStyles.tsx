@@ -7,7 +7,7 @@ const StyledBlogHero = styled.div`
     width: 100%;
 
     @media(min-width: 769px) {
-        flex-direction: ${props => props.portrate ? 'row' : 'column'}; 
+        flex-direction: ${props => props.portrait ? 'row' : 'column'}; 
     }
 
     h1 {
@@ -19,7 +19,7 @@ const StyledBlogHero = styled.div`
         height: auto;
 
         @media (min-width: 769px) {
-            width: ${props => props.portrate ? '50%' : '100%'}; 
+            width: ${props => props.portrait ? '50%' : '100%'}; 
             height: calc(100vh - 80px);
             background-position: center;
         }
@@ -36,16 +36,16 @@ const StyledBlogHero = styled.div`
         @media (min-width: 769px) {
             align-items: flex-end;
             padding: 0 4rem 2rem;
-            padding-top: ${props => props.portrate ? '50vh' : '240px'};
-            width: ${props => props.portrate ? '50%' : '100%'}; 
-            height: ${props => props.portrate ? 'calc(100vh - 80px)' : '10vh'}; 
+            padding-top: ${props => props.portrait ? '50vh' : '160px'};
+            width: ${props => props.portrait ? '50%' : '100%'}; 
+            height: ${props => props.portrait ? 'calc(100vh - 80px)' : '10vh'}; 
         }
         
         .content-container {
             @media (min-width: 769px) {
                 display: flex;
-                flex-direction: ${props => props.portrate ? 'column' : 'row'};
-                align-items: ${props => props.portrate ? 'column' : 'center'};
+                flex-direction: ${props => props.portrait ? 'column' : 'row'};
+                align-items: ${props => props.portrait ? 'column' : 'center'};
                 justify-content: space-between;
                 width: 100%;
             }

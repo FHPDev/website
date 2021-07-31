@@ -26,7 +26,7 @@ BlogCard.args = {
         gatsbyImageData: {
           images: {
             fallback: {
-              src: 'https://cdn.sanity.io/images/1fg8plz5/production/ea9b986df515de53358ae7fce7d238c7cd9aa070-225x225.jpg?w=225&h=225&auto=format',
+              src: 'https://cdn.sanity.io/images/1fg8plz5/production/ea9b986df515de53358ae7fce7d238c7cd9aa070-225x225.jpg?w=225&h=225&auto=format'
             }
           },
           layout: 'constrained',
